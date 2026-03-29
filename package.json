@@ -1,0 +1,28 @@
+{
+  "name": "tarefa_gulp_ebac",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "gulp-terser": "gulp terser",
+    "gulp-sass": "gulp sass",
+    "gulp-obfuscate": "gulp obfuscate",
+    "imagemimin": "gulp imagemin"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-image": "^6.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-obfuscate": "^0.2.9",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0"
+  }
+}
