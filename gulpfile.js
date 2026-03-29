@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
-const obfuscate = require('gulp-obfuscate');
+const obfuscate = require('gulp-javascript-obfuscator');
 const imagemin = require('gulp-imagemin');
 
 function compilaSass() {
@@ -12,7 +12,10 @@ function compilaSass() {
 function compilaJs() {
     return gulp.src('./src/js/**/*.js')
         .pipe(uglify())
-        .pipe(obfuscate())
+        .pipe(obfuscate({
+            compact: true,
+            controlFlowFlattening: true
+        }))
         .pipe(gulp.dest('./dist/js'));
 }
 function compilaImg() {
